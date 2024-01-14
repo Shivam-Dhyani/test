@@ -32,17 +32,18 @@ export const productsSlice = createSlice({
       state.products.productsErrors = error;
     },
     setTotalPrice: (state, { payload: price }) => {
-      console.log({ price });
       state.products.totalPrice = price;
     },
     setTotalQuantity: (state, { payload: quatity }) => {
       state.products.totalQuantity = quatity;
     },
     setProductList: (state, { payload: selectedProduct }) => {
-      const isProductExist = state.products.productList.find(
+      const isProductExist = state.products.productList.findIndex(
         (prod) => prod.id === selectedProduct.id
       );
-      if (!isProductExist) {
+      if (isProductExist >= 0) {
+        state.products.productList[isProductExist] = selectedProduct;
+      } else {
         state.products.productList = [
           ...state.products.productList,
           selectedProduct,
