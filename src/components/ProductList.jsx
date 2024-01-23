@@ -6,12 +6,8 @@ import { getAllProductsAction } from "../redux/reducers/products";
 import { isEmpty } from "lodash";
 
 const ProductList = () => {
-  const dispatch = useDispatch();
   const { products } = useSelector((state) => state.products);
 
-  useEffect(() => {
-    dispatch(getAllProductsAction());
-  }, []);
   return (
     <div className="flex w-screen flex-wrap justify-center mt-[-10px]">
       {products?.isProductsLoading ? (
