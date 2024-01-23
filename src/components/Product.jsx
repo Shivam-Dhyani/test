@@ -27,7 +27,9 @@ const Product = ({ product }) => {
       key={product?.id}
       className="bg-[cadetblue] flex h-72 w-72 flex-wrap border-black border-2 m-5 p-5 jusify-center items-center rounded-lg text-center"
     >
-      <span className="text-2xl text-center w-full">{product?.title}</span>
+      <span className="text-2xl text-center w-full line-clamp-3">
+        {product?.title}
+      </span>
       <div className="text-xl w-full">{`Price: ${round(
         product?.price,
         2
@@ -41,7 +43,7 @@ const Product = ({ product }) => {
           -
         </button>
         <span
-          className="text-xl border-2 border-black mx-3 p-1 cursor-pointer rounded-md"
+          className="bg-red-700 text-xl border-2 border-black mx-3 p-1 cursor-pointer rounded-md"
           onClick={() => handleAddToCart(product)}
         >
           Add to Cart
