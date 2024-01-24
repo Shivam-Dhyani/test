@@ -1,8 +1,7 @@
-import { useDispatch, useSelector } from "react-redux";
-import Product from "./Product";
+import { useSelector } from "react-redux";
 import { CircularProgress } from "@mui/material";
-import { useEffect } from "react";
-import { getAllProductsAction } from "../redux/reducers/products";
+import Product from "./Product";
+
 import { isEmpty } from "lodash";
 
 const ProductList = () => {

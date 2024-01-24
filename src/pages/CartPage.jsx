@@ -1,4 +1,4 @@
-import CartList from "../components/CartList";
+import CartList from "../components/Cartlist";
 import Header from "../components/Header";
 
 const CartPage = () => {
