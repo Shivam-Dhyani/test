@@ -38,7 +38,7 @@ const Header = () => {
         calculatedTotalPrice,
         2
       )}`}</span>
-      <sapn className="text-xl w-full text-center">{`Total Quantity: ${calculatedTotalQuantity}`}</sapn>
+      <span className="text-xl w-full text-center">{`Total Quantity: ${calculatedTotalQuantity}`}</span>
     </div>
   );
 };
